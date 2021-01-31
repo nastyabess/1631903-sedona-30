@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon152.png">
@@ -29,16 +33,16 @@
       <h1>Город Седона</h1>
       <img src="img/sedona.jpg" width="1200" height="509" alt="Седона">
     </section>
-    <section class="Description">
+    <section class="description">
       <h2>Описание</h2>
-      <p>Седона - небольшой городок в Аризоне, заслуживающий большего</p>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон! </p>
+      <p class="description-slogan ">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p class="description-desc">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон! </p>
     </section>
     <section class="features">
       <h2>Преимущества</h2>
       <ul class="features-list">
         <li class="feature-item">
-          <div>
+          <div class="feature-item-town">
             <h3>Настоящий городок</h3>
             <p>№1</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
@@ -63,7 +67,7 @@
         </li>
         <li class="feature-item">
           <div>
-            <div>
+            <div class="feature-item-bridge">
               <h3>Там есть мост дьявола</h3>
               <p>№2</p>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -74,21 +78,21 @@
           </div>
         </li>
         <li class="feature-item">
-          <div>
+          <div class="feature-item-others">
             <h3>Небольшая площадь</h3>
             <p>№3</p>
             <p>Все достопримечательности находятся очень близко</p>
           </div>
         </li>
         <li class="feature-item">
-          <div>
+          <div class="feature-item-others">
             <h3>Красивая дорога</h3>
             <p>№4</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
         </li>
         <li class="feature-item">
-          <div>
+          <div class="feature-item-others">
             <h3>Мало туристов</h3>
             <p>№5</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -98,10 +102,10 @@
     </section>
     <section class="appointment">
       <h2>Записаться</h2>
-      <p>Заинтересовались?</p>
+      <p class="appointment-headline">Заинтересовались?</p>
       <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в
         Седоне</p>
-      <button type="button">Поиск гостиницы в Седоне</button>
+      <button class="search" type="button">Поиск гостиницы в Седоне</button>
       <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="appointment-item">
           <label for="appointment-arrival">Дата заезда</label>
@@ -112,14 +116,14 @@
           <input id="appointment-departure" type="text" name="date" placeholder="4 июля 2017">
         </p>
         <p class="appointment-item">
-          <label for="appointment-adults">взрослые</label>
+          <label for="appointment-adults">Взрослые</label>
           <input id="appointment-adults" type="text" name="number" placeholder="2">
         </p>
         <p class="appointment-item">
           <label for="appointment-childs">Дети</label>
           <input id="appointment-childs" type="text" name="number" placeholder="0">
         </p>
-        <button class="button" type="button">Найти</button>
+        <button class="button" type="submit">Найти</button>
       </form>
     </section>
     <section class="map">
@@ -139,19 +143,38 @@
       <h2>Соцсети</h2>
       <ul>
         <li>
-          <a class="social-button" href="#">Твиттер</a>
+          <a class="social-button" href="#">
+            <span>Твиттер</span>
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
+                fill="white" />
+            </svg>
+          </a>
         </li>
         <li>
-          <a class="social-button" href="#">Фейсбук</a>
+          <a class="social-button" href="#">
+            <span>Фейсбук</span>
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white" />
+            </svg>
+          </a>
         </li>
         <li>
-          <a class="social-button" href="#">Youtube</a>
+          <a class="social-button" href="#">
+            <span>Youtube</span>
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
+                fill="white" />
+            </svg>
+          </a>
         </li>
       </ul>
     </section>
     <div class="footer-copyright">
       <p>Website</p>
-      <a class="logo" href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-htmlacademy.svg" width="114" height="40" alt="Логотип Htmlacademy">
       </a>
     </div>

@@ -1,0 +1,276 @@
+
+/* Variables */
+
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-extra-dark: #333333;
+  --basic-almost-black: #231F20;
+  --basic-blue: #81B3D2;
+  --basic-lightblue: #81B3D3;
+  --basic-skyblue: #669ec0;
+  --basic-lightskyblue: #5496bd;
+  --basic-zirkon-gray: #888888;
+  --basic-lightgray: #EEEEEE;
+  --basic-gray: #f2f2f2;
+  --basic-neutral: #a9a9a9;
+  --basic-extra-light: #666666;
+  --basic-brown: #766458;
+  --basic-lightbrown: #766357;
+  --basic-darkbrown: #503e33;
+  --basic-saddlebrown: #604e43;
+  --basic-lavender: #bdbbbc;
+}
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--basic-zirkon-gray);
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main navigation */
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation-current a:not([href]) {
+  background-color: var(--basic-white);
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover {
+  color: var(--basic-blue);
+}
+.site-navigation a:focus {
+  color: var(--basic-black);
+  opacity: 30%;
+}
+
+/*Description*/
+
+.description {
+  background-color: var(--basic-white);
+}
+
+.description-slogan {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.description-desc {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--basic-extra-dark);
+}
+
+/*features*/
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item-town {
+  background-color: var(--basic-blue);
+
+}
+
+.feature-item-town h3 {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-white);
+}
+
+.feature-item-town p {
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+/*benefits*/
+
+.benefits-list {
+  list-style: none;
+}
+.benefits-item {
+  background-color: var(--basic-white);
+}
+
+.benefits-item h4 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.benefits-item p {
+  font-weight: 400;
+  color: var(--basic-extra-dark);
+}
+
+.feature-item-bridge {
+  background-color: var(--basic-blue);
+}
+
+.feature-item-bridge h3 {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-white);
+  }
+
+.feature-item-bridge p {
+  font-weight: 400;
+  color: var(--basic-white);
+}
+
+.feature-item-others {
+  background-color: var(--basic-white);
+}
+
+.feature-item-others h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+.feature-item-others p {
+  font-weight: 400;
+  color: var(--basic-extra-dark);
+}
+
+/*appointment*/
+
+
+.appointment-headline {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.appointment-info {
+  color: var(--basic-extra-dark);
+  font-weight: 400;
+}
+.search {
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-white);
+  background-color: var(--basic-lightbrown);
+  border: inherit;
+}
+
+.search:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-saddlebrown);
+}
+
+.search:focus {
+  color: var(--basic-white);
+  opacity: 30%;
+  background-color: var(--basic-darkbrown);
+}
+
+.appointment-item {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.button {
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+  border: inherit;
+}
+
+.button:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-skyblue);
+}
+
+.button:focus {
+  color: var(--basic-white);
+  opacity: 30%;
+  background-color: var(--basic-lightskyblue);
+}
+
+.main-footer {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.footer-phone {
+  color: inherit;
+  text-align: left;
+}
+
+
+.footer-social ul {
+  list-style: none;
+}
+
+/* Social button*/
+
+.social-button {
+  color: var(--basic-white);
+  background-color:var(--basic-blue);
+
+}
+.social-button:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-skyblue);
+}
+.social-button:focus {
+  color: var(--basic-white);
+  fill: solid;
+  background-color: var(--basic-lightskyblue);
+}
+
+.footer-copyright {
+  font-weight: 400;
+  text-align: right;
+}
+
+.footer-logo {
+  color: var(--basic-almost-black);
+}
+
+.footer-logo:hover {
+  color: var(--basic-blue);
+}
+
+.footer-logo:focus {
+  color: var(--basic-lavender);
+}
