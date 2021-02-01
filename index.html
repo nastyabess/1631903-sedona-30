@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
@@ -15,12 +14,12 @@
 </head>
 
 <body class="page-body">
-  <header class="main-header">
-    <nav class="main-navigation">
+  <header class="main-header container">
+    <nav class="main-navigation container">
       <a class="main-header-logo">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
       </a>
-      <ul class="site-navigation">
+      <ul class="site-navigation list-reset">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
@@ -30,27 +29,27 @@
   </header>
   <main class="container">
     <section class="heading">
-      <h1>Город Седона</h1>
+      <h1 class="visually-hidden">Город Седона</h1>
       <img src="img/sedona.jpg" width="1200" height="509" alt="Седона">
     </section>
     <section class="description">
-      <h2>Описание</h2>
-      <p class="description-slogan ">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-      <p class="description-desc">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон! </p>
+      <h2 class="visually-hidden">Описание городка в Аризоне</h2>
+      <p class="description-slogan">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p class="">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон! </p>
     </section>
     <section class="features">
-      <h2>Преимущества</h2>
-      <ul class="features-list">
+      <h2 class="visually-hidden">Преимущества</h2>
+      <ul class="features-list list-reset">
         <li class="feature-item">
-          <div class="feature-item-town">
+          <div class="feature-item-descript feature-item-blue">
             <h3>Настоящий городок</h3>
             <p>№1</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <div>
+          <div class="main-image">
             <img src="img/town.jpg" width="800" height="256" alt="Фото городка">
           </div>
-          <ul class="benefits-list">
+          <ul class="benefits-list list-reset">
             <li class="benefits-item">
               <h4>Жилье</h4>
               <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -67,7 +66,7 @@
         </li>
         <li class="feature-item">
           <div>
-            <div class="feature-item-bridge">
+            <div class="feature-item-descript feature-item-blue">
               <h3>Там есть мост дьявола</h3>
               <p>№2</p>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -78,21 +77,21 @@
           </div>
         </li>
         <li class="feature-item">
-          <div class="feature-item-others">
+          <div class="feature-item-descript feature-item-lightgray">
             <h3>Небольшая площадь</h3>
             <p>№3</p>
             <p>Все достопримечательности находятся очень близко</p>
           </div>
         </li>
         <li class="feature-item">
-          <div class="feature-item-others">
+          <div class="feature-item-descript feature-item-lightgray">
             <h3>Красивая дорога</h3>
             <p>№4</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
         </li>
         <li class="feature-item">
-          <div class="feature-item-others">
+          <div class="feature-item-descript feature-item-lightgray">
             <h3>Мало туристов</h3>
             <p>№5</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -103,25 +102,24 @@
     <section class="appointment">
       <h2>Записаться</h2>
       <p class="appointment-headline">Заинтересовались?</p>
-      <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в
-        Седоне</p>
+      <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       <button class="search" type="button">Поиск гостиницы в Седоне</button>
       <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="appointment-item">
           <label for="appointment-arrival">Дата заезда</label>
-          <input id="appointment-arrival" type="text" name="date" placeholder="24 апреля 2017">
+          <input id="appointment-arrival" type="date" name="date" placeholder="24 апреля 2017">
         </p>
         <p class="appointment-item">
           <label for="appointment-departure">Дата выезда</label>
-          <input id="appointment-departure" type="text" name="date" placeholder="4 июля 2017">
+          <input id="appointment-departure" type="date" name="date" placeholder="4 июля 2017">
         </p>
         <p class="appointment-item">
           <label for="appointment-adults">Взрослые</label>
-          <input id="appointment-adults" type="text" name="number" placeholder="2">
+          <input id="appointment-adults" type="number" name="number" placeholder="2">
         </p>
         <p class="appointment-item">
           <label for="appointment-childs">Дети</label>
-          <input id="appointment-childs" type="text" name="number" placeholder="0">
+          <input id="appointment-childs" type="number" name="number" placeholder="0">
         </p>
         <button class="button" type="submit">Найти</button>
       </form>
@@ -141,14 +139,12 @@
     </section>
     <section class="footer-social">
       <h2>Соцсети</h2>
-      <ul>
+      <ul class="list-reset">
         <li>
           <a class="social-button" href="#">
             <span>Твиттер</span>
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z"
-                fill="white" />
+              <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white" />
             </svg>
           </a>
         </li>
@@ -164,9 +160,7 @@
           <a class="social-button" href="#">
             <span>Youtube</span>
             <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z"
-                fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white" />
             </svg>
           </a>
         </li>
