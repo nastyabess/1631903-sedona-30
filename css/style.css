@@ -34,10 +34,7 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: var(--basic-black);
-  text-align: center;
   text-transform: uppercase;
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 a {
@@ -76,7 +73,7 @@ img {
 }
 .site-navigation a:focus {
   color: var(--basic-black);
-  opacity: 30%;
+  opacity: 0.3;
 }
 .site-navigation a:active {
   color: var(--basic-lightbrown);
@@ -86,6 +83,7 @@ img {
 
 .description {
   background-color: var(--basic-white);
+  text-align: center;
 }
 
 .description-slogan {
@@ -125,7 +123,6 @@ img {
 
 .benefits-item h4 {
   font-size: 21px;
-  font-weight: 700;
 }
 
 .benefits-item p {
@@ -135,6 +132,9 @@ img {
 
 /*appointment*/
 
+.appointment {
+  text-align: center;
+}
 
 .appointment-headline {
   font-size: 30px;
@@ -161,7 +161,7 @@ img {
 
 .search:focus {
   color: var(--basic-white);
-  opacity: 30%;
+  opacity: 0.3;
   background-color: var(--basic-darkbrown);
 }
 
@@ -186,7 +186,7 @@ img {
 
 .button:focus {
   color: var(--basic-white);
-  opacity: 30%;
+  opacity: 0.3;
   background-color: var(--basic-lightskyblue);
 }
 
@@ -212,11 +212,15 @@ img {
 
 /* Social button*/
 
+.footer-social-items {
+  text-align: center;
+}
+
 .social-button {
   color: var(--basic-white);
   background-color:var(--basic-blue);
-
 }
+
 .social-button:hover {
   color: var(--basic-white);
   background-color: var(--basic-skyblue);
@@ -279,32 +283,26 @@ img {
 
 /*results*/
 
+.results {
+  font-size: 12px;
+  line-height: 18px;
+}
+
 .results-find {
   font-size: 21px;
   line-height: 26px;
 }
 
-.results-sort {
-  font-size: 12px;
-  line-height: 18px;
-}
-
 .results-price {
-  font-size: 12px;
-  line-height: 18px;
   color: var(--basic-blue);
 }
 
 .results-type {
-  font-size: 12px;
-  line-height: 18px;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .results-rating {
-  font-size: 12px;
-  line-height: 18px;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .results-rating:hover {
@@ -330,7 +328,7 @@ img {
 
 .title:focus {
   color: var(--basic-black);
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .type {
@@ -349,7 +347,7 @@ img {
 
 .extra:focus {
   color: var(--basic-white);
-  opacity: 30%;
+  opacity: 0.3;
   background-color: var(--basic-lightskyblue);
 }
 
@@ -366,7 +364,7 @@ img {
 
 .book:focus {
   color: var(--basic-white);
-  opacity: 30%;
+  opacity: 0.3;
   background-color: var(--basic-darkbrown);
 }
 

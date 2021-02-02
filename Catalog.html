@@ -35,9 +35,9 @@
         <fieldset>
           <legend class="filter-type">Инфраструктура</legend>
           <ul class="list-reset">
-            <li class="filter-option filter-checkbox"></li>
-            <input class="filter-input-checkbox filter-input" type="checkbox" name="swimmingpool" id="filter-swimmingpool" checked>
-            <label for="filter-swimingpool">Бассейн</label>
+            <li class="filter-option filter-checkbox">
+              <input class="filter-input-checkbox filter-input" type="checkbox" name="swimmingpool" id="filter-swimmingpool" checked>
+              <label for="filter-swimingpool">Бассейн</label>
             </li>
             <li class="filter-option filter-checkbox">
               <input class="filter-input-checkbox filter-input" type="checkbox" name="parking" id="filter-parking">
@@ -68,13 +68,13 @@
         </fieldset>
         <fieldset>
           <p class="filter-type">Стоимость в сутки (р)</p>
-          <form class="filter-cost" action="/echo" method="post">
-            <input type="text" name="from" value="От 0">
-            <input type="text" name="before" value="До 3000"><br>
-            <input type="range" min="0" max="3000">
-            <button class="filter-cost-button" type="submit">Показать</button>
-          </form>
+          <button class="filter-cost-button" type="submit">Показать</button>
         </fieldset>
+      </form>
+      <form class="filter-cost" action="/echo" method="post">
+        <input type="text" name="from" value="От 0">
+        <input type="text" name="before" value="До 3000"><br>
+        <input type="range" min="0" max="3000">
       </form>
     </section>
     <section class="results">
@@ -86,9 +86,12 @@
       <p class="results-rating">По рейтингу</p>
       <!--кнопка переключения вверх-вниз-->
     </section>
-    <section>
+    <section class="results-list">
       <h2 class="visually-hidden">Список гостиниц</h2>
-      <div>
+      <div class="results-list-table">
+        <div class="image">
+          <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
+        </div>
         <table class="selection">
           <tr>
             <td colspan="2"><a class="title" href="#">Amara Resort & Spa</a></td>
@@ -105,9 +108,11 @@
             <td class="rating">Рейтинг:8,5</td>
           </tr>
         </table>
-        <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
       </div>
-      <div>
+      <div class="results-list-table">
+        <div class="image">
+          <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
+        </div>
         <table class="selection">
           <tr>
             <td colspan="2"><a class="title" href="#">Desert Quail Inn</a></td>
@@ -124,25 +129,26 @@
             <td class="rating">Рейтинг:8,9</td>
           </tr>
         </table>
-        <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
       </div>
-      <div>
-        <table class="selection">
-          <tr>
-            <td colspan="2"><a class="title" href="">Villas at Poco Diablo</a></td>
-            <td class="rating-star">Звезды рейтинга</td>
-          </tr>
-          <tr class="type">
-            <td>Аппартаменты</td>
-            <td>от 2000р.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td><a class="extra" href="#">Подробнее</a></td>
-            <td><a class="book" href="#">Забронировать</a></td>
-            <td class="rating">Рейтинг:9,2</td>
-        </table>
+      <div class="results-list-table">
         <img src="img/pocodiablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+      </div>
+      <table class="selection">
+        <tr>
+          <td colspan="2"><a class="title" href="">Villas at Poco Diablo</a></td>
+          <td class="rating-star">Звезды рейтинга</td>
+        </tr>
+        <tr class="type">
+          <td>Аппартаменты</td>
+          <td>от 2000р.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><a class="extra" href="#">Подробнее</a></td>
+          <td><a class="book" href="#">Забронировать</a></td>
+          <td class="rating">Рейтинг:9,2</td>
+        </tr>
+      </table>
       </div>
     </section>
   </main>
@@ -156,7 +162,7 @@
     </section>
     <section class="footer-social">
       <h2 class="visually-hidden">Соцсети</h2>
-      <ul class="list-reset">
+      <ul class="footer-social-items list-reset">
         <li>
           <a class="social-button" href="#">
             <span class="visually-hidden">Твиттер</span>
