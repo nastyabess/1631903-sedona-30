@@ -103,7 +103,6 @@ img {
 
 .feature-item-descript h3{
   font-size: 21px;
-  font-weight: 700;
 }
 
 .feature-item-blue {
@@ -247,22 +246,16 @@ img {
 /*Catalog*/
 
 
-
 /* Filters */
 
 .filters {
   background-image: url("../img/mountain.jpg");
-  background-color: var(--basic-lightblue);
   color: var(--basic-white);
 }
 
-.filter legend p {
+.filter-type {
   font-size: 16px;
-}
-
-
-.filter-input-checkbox {
-  color: var(--basic-white);
+  font-weight: 700;
 }
 
 .filter-input-checkbox:hover {
@@ -271,10 +264,6 @@ img {
 
 .filter-input-checkbox:focus {
   color: var(--basic-dimgray);
-}
-
-.filter-cost {
-  font-weight: 400;
 }
 
 .filter-cost-button {
@@ -298,27 +287,23 @@ img {
 .results-sort {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
 }
 
 .results-price {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
   color: var(--basic-blue);
 }
 
 .results-type {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
   opacity: 30%;
 }
 
 .results-rating {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
   opacity: 30%;
 }
 
@@ -336,6 +321,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   color: var (var(--basic-black));
+  font-weight: 700;
 }
 
 .title:hover {
@@ -348,13 +334,13 @@ img {
 }
 
 .type {
-  font-weight: 400;
   color: var(--basic-extra-dark);
 }
 
 .extra {
   color: var(--basic-white);
   background-color: var(--basic-blue);
+  font-weight: 700;
 }
 .extra:hover {
   color: var(--basic-white);
@@ -370,6 +356,7 @@ img {
 .book {
   color: var(--basic-white);
   background-color: var(--basic-lightbrown);
+  font-weight: 700;
 }
 
 .book:hover {
@@ -384,6 +371,5 @@ img {
 }
 
 .rating {
-  font-weight: 400;
   color: var(--basic-extra-light);
 }
