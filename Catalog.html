@@ -14,9 +14,9 @@
 </head>
 
 <body class="page-body">
-  <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
+  <header class="main-header container">
+    <nav class="main-navigation container">
+      <a class="main-header-logo">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
       </a>
       <ul class="site-navigation list-reset">
@@ -32,7 +32,7 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр для поиска</h2>
       <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset>
+        <fieldset class="options-type">
           <legend class="filter-type">Инфраструктура</legend>
           <ul class="list-reset">
             <li class="filter-option filter-checkbox">
@@ -49,7 +49,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="options-type">
           <legend class="filter-type">Тип жилья</legend>
           <ul class="list-reset">
             <li class="filter-option filter-checkbox">
@@ -66,7 +66,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="options-type">
           <p class="filter-type">Стоимость в сутки (р)</p>
           <button class="filter-cost-button" type="submit">Показать</button>
         </fieldset>
