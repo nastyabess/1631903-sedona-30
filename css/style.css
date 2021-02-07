@@ -111,7 +111,11 @@ img {
 
 .site-navigation {
   display: flex;
-  width: 1200px;
+  padding: 0 72px;
+}
+
+.site-navigation li {
+  width: 227px;
 }
 
 .site-navigation li:nth-child(4n + 1) {
@@ -124,17 +128,16 @@ img {
 }
 
 .site-navigation li:nth-child(4n + 3),
-.site-navigation:nth-child(4n + 4) {
+.site-navigation li:nth-child(4n + 4) {
   text-align: right;
 }
 
 .main-header-logo {
   display: flex;
-  justify-self: center;
+  width: 138px;
+  height: 70px;
+  position: absolute;
 }
-
-
-
 
 .site-navigation-current a:not([href]) {
   background-color: var(--basic-white);
