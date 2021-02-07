@@ -307,15 +307,22 @@ outline-offset: -5px;
   outline-offset: -5px;
 }
 
+.form-search {
+  width: 568px;
+  margin: 0 auto;
+  outline: 5px solid rgba(43, 8, 238, 0.938);
+  outline-offset: -5px;
+}
+
 .search {
-  padding: 30px;
+  padding: 30px 125px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  width: 568px;
   color: var(--basic-white);
   background-color: var(--basic-lightbrown);
   border: inherit;
+  text-transform: uppercase;
   outline: 5px solid rgba(96, 226, 10, 0.938);
   outline-offset: -5px;
 }
@@ -339,6 +346,13 @@ outline-offset: -5px;
   font-weight: 700;
 }
 
+
+.appointment-form {
+  padding: 55px;
+  outline: 5px solid rgb(221, 245, 3);
+  outline-offset: -5px;
+}
+
 .button {
   font-size: 21px;
   line-height: 26px;
@@ -358,14 +372,7 @@ outline-offset: -5px;
   background-color: var(--basic-lightskyblue);
 }
 
-.appointment-form {
-  width: 458px;
-  margin: 0 auto;
-  padding: 55px;
-  outline: 5px solid rgb(221, 245, 3);
-  outline-offset: -5px;
 
-}
 
 .map {
   outline: 5px solid rgba(37, 39, 36, 0.938);
