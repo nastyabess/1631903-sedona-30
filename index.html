@@ -40,7 +40,7 @@
     <section class="features">
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="features-list list-reset">
-        <li class="feature-item reason blue">
+        <li class="feature-item reason">
           <div class="feature-item-image">
             <div class="feature-item-descript feature-item-blue">
               <h3>Настоящий городок</h3>
@@ -105,26 +105,28 @@
       <h2 class="visually-hidden">Записаться</h2>
       <p class="appointment-headline">Заинтересовались?</p>
       <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-      <button class="search" type="button">Поиск гостиницы в Седоне</button>
-      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="appointment-item">
-          <label for="appointment-arrival">Дата заезда</label>
-          <input id="appointment-arrival" type="date" name="date" placeholder="24 апреля 2017">
-        </p>
-        <p class="appointment-item">
-          <label for="appointment-departure">Дата выезда</label>
-          <input id="appointment-departure" type="date" name="date" placeholder="4 июля 2017">
-        </p>
-        <p class="appointment-item">
-          <label for="appointment-adults">Взрослые</label>
-          <input id="appointment-adults" type="number" name="number" placeholder="2">
-        </p>
-        <p class="appointment-item">
-          <label for="appointment-childs">Дети</label>
-          <input id="appointment-childs" type="number" name="number" placeholder="0">
-        </p>
-        <button class="button" type="submit">Найти</button>
-      </form>
+      <div>
+        <button class="search" type="button">Поиск гостиницы в Седоне</button>
+        <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="appointment-item">
+            <label for="appointment-arrival">Дата заезда</label>
+            <input id="appointment-arrival" type="date" name="date" placeholder="24 апреля 2017">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-departure">Дата выезда</label>
+            <input id="appointment-departure" type="date" name="date" placeholder="4 июля 2017">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-adults">Взрослые</label>
+            <input id="appointment-adults" type="number" name="number" placeholder="2">
+          </p>
+          <p class="appointment-item">
+            <label for="appointment-childs">Дети</label>
+            <input id="appointment-childs" type="number" name="number" placeholder="0">
+          </p>
+          <button class="button" type="submit">Найти</button>
+        </form>
+      </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
