@@ -558,7 +558,6 @@ outline-offset: -5px;
 }
 
 .results-list {
-  margin: 10px;
   outline: 5px solid rgb(199, 243, 6);
   outline-offset: -5px;
 }
@@ -566,19 +565,20 @@ outline-offset: -5px;
 .results-list-table {
   display: grid;
   grid-template-columns: 150px 1fr;
+  margin-bottom: 30px;
+  padding: 0 73px;
   outline: 5px solid rgb(97, 6, 243);
   outline-offset: -5px;
 }
 
 .results-image {
-  margin: 5px;
   width: 135px;
   outline: 5px solid rgb(158, 77, 145);
   outline-offset: -5px;
 }
 
 .selection {
-  margin: 5px;
+  padding: 24px 29px 7px;
   outline: 5px solid rgb(243, 8, 204);
   outline-offset: -5px;
 }
