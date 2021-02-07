@@ -133,10 +133,9 @@ img {
 }
 
 .main-header-logo {
-  display: flex;
   width: 138px;
   height: 70px;
-  margin-left: 531px;
+  margin: 0 auto;
   position: absolute;
 }
 
