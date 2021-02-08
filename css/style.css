@@ -513,15 +513,16 @@ outline-offset: -5px;
 .results {
   display: grid;
   grid-template-columns: auto auto 1fr;
-  padding: 0 73px;
+  padding-top: 30px;
   font-size: 12px;
   line-height: 18px;
   outline: 5px solid rgb(5, 243, 223);
   outline-offset: -5px;
 }
 
-
 .results-find {
+  margin: 0;
+  padding-left: 73px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -536,17 +537,14 @@ outline-offset: -5px;
 
 .parts {
   display: flex;
-  padding-top: 13px;
-  padding-left: 46px;
   outline: 5px solid rgb(0, 12, 11);
   outline-offset: -5px;
 }
 
 .activ {
- margin-right: 32px;
- text-align: center;
- outline: 5px solid rgb(10, 228, 21);
- outline-offset: -5px;
+  margin-right: 32px;
+  outline: 5px solid rgb(10, 228, 21);
+  outline-offset: -5px;
 }
 
 .results-price {
@@ -562,8 +560,7 @@ outline-offset: -5px;
 }
 
 .icon-triangle {
-
-  outline: 5px solid rgb(10, 228, 21);
+  outline: 5px solid rgb(16, 17, 16);
   outline-offset: -5px;
 }
 
