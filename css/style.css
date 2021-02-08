@@ -531,8 +531,7 @@ outline-offset: -5px;
 }
 
 .results-sort {
-  outline: 5px solid rgb(10, 228, 21);
-  outline-offset: -5px;
+
 }
 
 .parts {
@@ -543,8 +542,7 @@ outline-offset: -5px;
 
 .activ {
   margin-right: 32px;
-  outline: 5px solid rgb(10, 228, 21);
-  outline-offset: -5px;
+
 }
 
 .results-price {
