@@ -315,10 +315,11 @@ outline-offset: -5px;
 }
 
 .search {
-  padding: 30px 140px;
+  padding: 30px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-lightbrown);
   border: inherit;
@@ -511,8 +512,8 @@ outline-offset: -5px;
 
 .results {
   display: flex;
+  grid-template-columns: auto auto 1fr;
   padding: 0 73px;
-  padding-top: ;
   font-size: 12px;
   line-height: 18px;
   outline: 5px solid rgb(5, 243, 223);
@@ -524,29 +525,46 @@ outline-offset: -5px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  outline: 5px solid rgb(0, 12, 11);
+  outline-offset: -5px;
 }
 
 .results-sort {
-  padding-left: 46px;
+  outline: 5px solid rgb(10, 228, 21);
+  outline-offset: -5px;
+}
+
+.parts {
+  display: flex;
   padding-top: 13px;
+  padding-left: 46px;
+  outline: 5px solid rgb(0, 12, 11);
+  outline-offset: -5px;
+}
+
+.activ {
+ margin-right: 32px;
+ text-align: center;
+ outline: 5px solid rgb(10, 228, 21);
+ outline-offset: -5px;
 }
 
 .results-price {
-  padding-left: 40px;
-  padding-top: 14px;
   color: var(--basic-blue);
 }
 
 .results-type {
-  padding-left: 32px;
-  padding-top: 13px;
   opacity: 0.3;
 }
 
 .results-rating {
-  padding-left: 33px;
-  padding-top: 14px;
   opacity: 0.3;
+}
+
+.icon-triangle {
+
+  outline: 5px solid rgb(10, 228, 21);
+  outline-offset: -5px;
 }
 
 .results-rating:hover {
@@ -564,9 +582,11 @@ outline-offset: -5px;
 
 .results-list-table {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  margin-bottom: 30px;
+  grid-template-columns: 135px auto 1fr;
+  column-gap: 30px;
   padding: 0 73px;
+  padding-top: 23px;
+  padding-bottom: 33px;
   outline: 5px solid rgb(97, 6, 243);
   outline-offset: -5px;
 }
@@ -577,12 +597,21 @@ outline-offset: -5px;
   outline-offset: -5px;
 }
 
+
 .selection {
-  padding: 24px 29px 7px;
   outline: 5px solid rgb(243, 8, 204);
   outline-offset: -5px;
 }
 
+.rating{
+  outline: 5px solid rgb(8, 169, 243);
+  outline-offset: -5px;
+}
+
+.rating-value {
+  color: var(--basic-extra-light);
+
+}
 
 /*selection*/
 
@@ -639,6 +668,4 @@ outline-offset: -5px;
   background-color: var(--basic-darkbrown);
 }
 
-.rating {
-  color: var(--basic-extra-light);
-}
+
