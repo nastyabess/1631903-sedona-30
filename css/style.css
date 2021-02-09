@@ -12,6 +12,7 @@
   --basic-lightskyblue: #5496bd;
   --basic-zirkon-gray: #888888;
   --basic-lightgray: #EEEEEE;
+  --basic-ashgray: #CACACA;
   --basic-gray: #f2f2f2;
   --basic-dimgray: #6a6a6a;
   --basic-neutral: #a9a9a9;
@@ -515,8 +516,7 @@ outline-offset: -5px;
   grid-template-columns: auto auto 1fr;
   font-size: 12px;
   line-height: 18px;
-  outline: 5px solid rgb(5, 243, 223);
-  outline-offset: -5px;
+
 }
 
 .results-find {
@@ -540,31 +540,44 @@ outline-offset: -5px;
 
 .activ {
   margin-right: 10px;
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
-.results-price {
+.activ a:hover {
   color: var(--basic-blue);
 }
 
-.results-type {
-  opacity: 0.3;
+.activ a:focus {
+  color: var(--basic-black);
 }
 
-.results-rating {
-  opacity: 0.3;
+.activ a:active {
+  color: var(--basic-blue);
 }
+
+/* Arrow*/
 
 .icon-triangle {
-  outline: 5px solid rgb(16, 17, 16);
+  grid-column: 3 / -1;
+  outline: 5px solid rgb(19, 230, 19);
   outline-offset: -5px;
 }
 
-.results-rating:hover {
+.arrow {
+  color: var(--basic-ashgray);
+}
+
+.arrow:hover {
+  color: var(--basic-black);
+}
+
+.arrow:focus {
   color: var(--basic-blue);
 }
 
-.results-rating:focus {
-  color: var(--basic-black);
+.arrow:active {
+  color: var(--basic-blue);
 }
 
 .results-list {
