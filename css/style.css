@@ -224,7 +224,7 @@ width: 100%;
 }
 
 .blue .feature-item-blue {
-order: 1;
+  order: 1;
 }
 
 
@@ -513,7 +513,6 @@ outline-offset: -5px;
 .results {
   display: grid;
   grid-template-columns: auto auto 1fr;
-  padding-top: 30px;
   font-size: 12px;
   line-height: 18px;
   outline: 5px solid rgb(5, 243, 223);
@@ -521,28 +520,26 @@ outline-offset: -5px;
 }
 
 .results-find {
-  margin: 0;
   padding-left: 73px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  outline: 5px solid rgb(0, 12, 11);
+}
+
+.parts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 46px;
+  align-items: center;
+  outline: 5px solid rgb(85, 134, 130);
   outline-offset: -5px;
 }
 
 .results-sort {
-
-}
-
-.parts {
-  display: flex;
-  outline: 5px solid rgb(0, 12, 11);
-  outline-offset: -5px;
 }
 
 .activ {
-  margin-right: 32px;
-
+  margin-right: 10px;
 }
 
 .results-price {
