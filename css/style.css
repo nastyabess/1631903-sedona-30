@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 /* Variables */
 
 :root {
@@ -32,15 +42,19 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   font-family: "PT Sans", Arial, sans-serif;
   color: var(--basic-black);
   text-transform: uppercase;
-
   grid-template-rows: min-content 1fr min-content;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -200,18 +214,13 @@ img {
 /*features*/
 
 .features {
-  margin: 0;
-  padding: 0;
+
   /* outline: 5px solid rgb(17, 244, 252); */
 }
 
 .features-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.feature-item {
-  width: 400px;
 }
 
 .reason {
@@ -224,12 +233,23 @@ img {
   /* outline-offset: -5px; */
 }
 
+.feature-item-descript {
+  padding: 40px 50px;
+  text-align: center;
+}
+
 .feature-item-descript h3 {
+  margin-bottom: 25px;
   font-size: 21px;
 }
 
+.feature-item-descript p+p {
+  padding-top: 20px;
+}
+
+
 .feature-item-blue {
-  text-align: center;
+  width: 400px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
   /* outline: 5px solid rgb(48, 87, 88); */
@@ -241,14 +261,11 @@ img {
 }
 
 .feature-item-blue p {
-  margin: 0 52px;
-  margin-bottom: 54px;
+
 }
 
 .feature-item-lightgray {
-  margin: 0;
-  padding: 20px 40px;
-  text-align: center;
+  width: 400px;
   color: var(--basic-black);
   background-color: var(--basic-lightgray);
   /* outline: 5px solid rgb(211, 247, 9); */
@@ -269,23 +286,25 @@ img {
 .benefits-list {
   display: grid;
   margin: 0;
+  padding: 0;
   text-align: center;
   /* outline: 5px solid rgb(19, 46, 133); */
   /* outline-offset: -5px; */
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* .benefits-item { */
+ .benefits-item {
+   padding: 160px 70px 70px;
 /* outline: 5px solid rgba(236, 7, 26, 0.3); */
 /* outline-offset: -5px; */
-/* } */
+ }
 
 .benefits-item h4 {
   font-size: 21px;
+  margin-bottom: 25px;
 }
 
 .benefits-item p {
-  padding: 0 40px;
   color: var(--basic-extra-dark);
 }
 
