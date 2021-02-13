@@ -408,6 +408,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 120px;
+
   color: var(--basic-black);
   background-color: var(--basic-white);
   outline: 5px solid rgba(255, 0, 0, 0.7);
@@ -420,7 +421,7 @@ a {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  padding-bottom: 30px;
+
   text-align: center;
   /*outline: 5px solid rgba(255, 0, 200, 0.7);
   outline-offset: -5px;*/
@@ -442,10 +443,12 @@ a {
 .footer-social-items {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   width: 150px;
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 36px;
   outline: 5px solid rgb(15, 126, 126);
   outline-offset: -5px;
 }
