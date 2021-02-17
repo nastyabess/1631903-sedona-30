@@ -167,8 +167,6 @@ a {
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  outline: 5px solid rgb(142, 35, 230);
-  outline-offset: -5px;
 }
 
 
@@ -202,7 +200,7 @@ a {
   background-image: url(../img/sedona.jpg);
   text-align: center;
   background-color: var(--basic-ashgray);
-  outline: 5px solid rgba(243, 10, 10, 0.959);
+  /*outline: 5px solid rgba(243, 10, 10, 0.959);*/
 }
 
 .heading img {
@@ -364,8 +362,8 @@ a {
   width: 568px;
   margin: 0 auto;
 
-   outline: 5px solid rgba(43, 8, 238, 0.938);
-  outline-offset: -5px;
+  /* outline: 5px solid rgba(43, 8, 238, 0.938);
+  outline-offset: -5px;*/
 }
 
 .search {
@@ -400,7 +398,8 @@ a {
 .appointment-form {
   display: flex;
   flex-wrap: wrap;
-  text-align: start;
+  justify-content: space-between;
+
   padding: 55px;
 
   /* outline: 5px solid rgb(221, 245, 3); */
@@ -413,7 +412,7 @@ a {
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
-  outline: 5px solid #ff0000;
+  /*outline: 5px solid #ff0000;*/
 }
 
 .appointment-item label {
@@ -431,10 +430,18 @@ a {
 .appointment-item input::-webkit-calendar-picker-indicator {
   color: rgba(0, 0, 0, 0);
   opacity: 1;
-  display: block;
+  display: inline-block;
   background: url(../img/calendar.svg) no-repeat;
   width: 21px;
   height: 23px;
+}
+
+.appointment-item input::-webkit-calendar-picker-indicator:hover {
+  fill: var(--basic-black);
+}
+
+.appointment-item input::-webkit-calendar-picker-indicator:focus {
+  fill: var(--basic-blue);
 }
 
 .appointment-item input:hover {
@@ -446,33 +453,51 @@ a {
   border: 2px solid var(--basic-very-light-gray);
 }
 
+
+/*Input Number*/
+
 .appointment-adults-childs {
-  width: 215px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 205px;
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
   margin-bottom: 36px;
-  margin-right: 26px;
-  outline: 5px solid rgb(88, 3, 245);
-  outline-offset: -5px;
+
+  /*outline: 5px solid rgb(88, 3, 245);
+  outline-offset: -5px;*/
 }
 
 .appointment-adults-childs label {
-  margin-right: 25px;
+
 }
 
 .appointment-adults-childs input {
+  position: relative;
   width: 114px;
-  outline: 5px solid rgb(221, 245, 3);
-  outline-offset: -5px;
+  /*outline: 5px solid rgb(221, 245, 3);
+  outline-offset: -5px;*/
 }
-
-/*Input Number*/
-
 
 .appointment-adults-childs input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
+.appointment-adults-childs input::before {
+  content: "";
+  position: absolute;
+  background-color: var(--basic-neutral);
+}
+
+.appointment-adults-childs input::after {
+  content: "";
+  position: absolute;
+
+  background-color: var(--basic-neutral);
+}
+
 
 .button {
   font-size: 21px;
@@ -510,8 +535,8 @@ a {
 
   color: var(--basic-black);
   background-color: var(--basic-white);
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
+  /*outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;*/
 
 }
 
@@ -548,8 +573,8 @@ a {
   margin: 0 auto;
   padding: 0;
   padding-bottom: 36px;
-  outline: 5px solid rgb(15, 126, 126);
-  outline-offset: -5px;
+  /*outline: 5px solid rgb(15, 126, 126);
+  outline-offset: -5px;*/
 }
 
 .social-button {
