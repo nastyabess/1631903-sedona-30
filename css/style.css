@@ -132,6 +132,10 @@ a {
   /* outline-offset: -5px; */
 }
 
+.main-header-wrap {
+  position: relative;
+}
+
 .site-navigation {
   display: flex;
   padding: 15px 72px;
@@ -160,7 +164,9 @@ a {
   width: 138px;
   height: 70px;
   margin: 0 auto;
-
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
   outline: 5px solid rgb(142, 35, 230);
   outline-offset: -5px;
 }
@@ -415,13 +421,20 @@ a {
 }
 
 .appointment-item input {
-  width: 340px;
-  padding-top: 6px;
-  padding-right: 200px;
-  padding-bottom: 6px;
-  padding-left: 13px;
+  width: 346px;
   background-color: var(--basic-gray);
   border: none;
+}
+
+/*Calendar*/
+
+.appointment-item input::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../img/calendar.svg) no-repeat;
+  width: 21px;
+  height: 23px;
 }
 
 .appointment-item input:hover {
@@ -431,6 +444,34 @@ a {
 .appointment-item input:focus {
   background-color: var(--basic-white);
   border: 2px solid var(--basic-very-light-gray);
+}
+
+.appointment-adults-childs {
+  width: 215px;
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+  margin-bottom: 36px;
+  margin-right: 26px;
+  outline: 5px solid rgb(88, 3, 245);
+  outline-offset: -5px;
+}
+
+.appointment-adults-childs label {
+  margin-right: 25px;
+}
+
+.appointment-adults-childs input {
+  width: 114px;
+  outline: 5px solid rgb(221, 245, 3);
+  outline-offset: -5px;
+}
+
+/*Input Number*/
+
+
+.appointment-adults-childs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .button {
