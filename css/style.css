@@ -33,6 +33,7 @@ html {
   --basic-zirkon-gray: #888888;
   --basic-silver-gray: #ebebeb;
   --basic-very-light-gray: #e5e5e5;
+  --basic-medium-light-gray: #ababab;
 }
 
 /* Global */
@@ -231,7 +232,6 @@ a {
 /*features*/
 
 .features {
-
   /* outline: 5px solid rgb(17, 244, 252); */
 }
 
@@ -399,7 +399,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   padding: 55px;
 
   /* outline: 5px solid rgb(221, 245, 3); */
@@ -425,6 +424,15 @@ a {
   border: none;
 }
 
+.appointment-item input:hover {
+  background-color: var(--basic-silver-gray);
+}
+
+.appointment-item input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-very-light-gray);
+}
+
 /*Calendar*/
 
 .appointment-item input::-webkit-calendar-picker-indicator {
@@ -444,14 +452,7 @@ a {
   fill: var(--basic-blue);
 }
 
-.appointment-item input:hover {
-  background-color: var(--basic-silver-gray);
-}
 
-.appointment-item input:focus {
-  background-color: var(--basic-white);
-  border: 2px solid var(--basic-very-light-gray);
-}
 
 
 /*Input Number*/
@@ -470,13 +471,11 @@ a {
   outline-offset: -5px;*/
 }
 
-.appointment-adults-childs label {
-
-}
 
 .appointment-adults-childs input {
   position: relative;
   width: 114px;
+  text-align: center;
   /*outline: 5px solid rgb(221, 245, 3);
   outline-offset: -5px;*/
 }
@@ -485,19 +484,27 @@ a {
   -webkit-appearance: none;
 }
 
+
 .appointment-adults-childs input::before {
   content: "";
   position: absolute;
+  top: 4px;
+  background-color: url(../img/Rectangle.svg) no-repeat;
   background-color: var(--basic-neutral);
 }
 
+/*
 .appointment-adults-childs input::after {
   content: "";
   position: absolute;
-
+  top: 50%;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  transform: translateY(-50%);
   background-color: var(--basic-neutral);
 }
-
+*/
 
 .button {
   font-size: 21px;
@@ -621,6 +628,7 @@ padding-right: 8px;
 .footer-logo:focus path {
   fill: var(--basic-lavender);
 }
+/*
 
 /*Catalog*/
 
@@ -697,16 +705,136 @@ padding-right: 8px;
   color: var(--basic-dimgray);
 }
 
-.filter-cost-button {
+/*filter-item-cost-range*/
+
+.filter-item-cost-range {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.range-filter {
+  width: 330px;
   color: var(--basic-white);
-  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.price-controls label {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
   border: 2px solid var(--basic-white);
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: var(--basic-white);
+  transform: translate(-50%, -50%);
+}
+
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--basic-white);
+  opacity: 0.3;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #00ca74;
+}
+
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: var(--basic-medium-light-gray);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--basic-medium-light-gray);
+  cursor: pointer;
+}
+
+
+.range-toggle:hover {
+  border: 9px solid var(--basic-white);
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.filter-cost-button {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
 }
 
 .filter-cost-button:hover {
-  color: var(--basic-black);
-  background-color: var(--basic-white);
+  color: #000000;
+
+  background: #ffffff;
 }
+
+
+
+
+
 
 /*results*/
 
@@ -860,3 +988,4 @@ padding-right: 8px;
   background-color: var(--basic-darkbrown);
   opacity: 0.3;
 }
+
