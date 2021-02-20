@@ -196,6 +196,7 @@ a {
 /*Heading*/
 
 .heading {
+  position: relative;
   width: 1200px;
   height: 509px;
   background-image: url(../img/sedona.jpg);
@@ -208,6 +209,12 @@ a {
   display: block;
   margin: 0 auto;
   padding-top: 76px;
+}
+
+.heading svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 /*Description*/
@@ -369,7 +376,6 @@ a {
 .search {
   width: 100%;
   padding: 30px;
-
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -401,17 +407,18 @@ a {
   justify-content: space-between;
   padding: 55px;
 
-  /* outline: 5px solid rgb(221, 245, 3); */
-  /* outline-offset: -5px; */
+  outline: 5px solid rgb(221, 245, 3);
+outline-offset: -5px;
 }
 
 
 .appointment-item {
+  position: relative;
   width: 458px;
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
-  /*outline: 5px solid #ff0000;*/
+  outline: 1px solid #ff0000;
 }
 
 .appointment-item label {
@@ -420,6 +427,12 @@ a {
 
 .appointment-item input {
   width: 346px;
+  height: 38px;
+  padding-left: 13px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
   background-color: var(--basic-gray);
   border: none;
 }
@@ -433,26 +446,26 @@ a {
   border: 2px solid var(--basic-very-light-gray);
 }
 
+
 /*Calendar*/
 
-.appointment-item input::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: inline-block;
-  background: url(../img/calendar.svg) no-repeat;
+
+
+.appointment-item svg {
+  position: absolute;
+  right: 14px;
+  top: 7px;
   width: 21px;
   height: 23px;
 }
 
-.appointment-item input::-webkit-calendar-picker-indicator:hover {
+.appointment-item svg:hover path{
   fill: var(--basic-black);
 }
 
-.appointment-item input::-webkit-calendar-picker-indicator:focus {
+.appointment-item svg:focus path{
   fill: var(--basic-blue);
 }
-
-
 
 
 /*Input Number*/
@@ -461,50 +474,78 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 205px;
+  position: relative;
+  width: 220px;
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
   margin-bottom: 36px;
-
-  /*outline: 5px solid rgb(88, 3, 245);
-  outline-offset: -5px;*/
+ outline: 1px solid rgba(46, 12, 236, 0.938);
+  outline-offset: -1px;
 }
+
+.appointment-adults-childs label {
+ padding-left: 10px;
+ padding-top: 5px;
+
+/* outline: 2px solid rgba(85, 218, 19, 0.938);
+ outline-offset: -2px;*/
+
+}
+
 
 
 .appointment-adults-childs input {
-  position: relative;
+
   width: 114px;
+  height: 38px;
   text-align: center;
-  /*outline: 5px solid rgb(221, 245, 3);
-  outline-offset: -5px;*/
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: var(--basic-gray);
+  border: none;
+ /* outline: 2px solid rgba(37, 39, 36, 0.938);
+ outline-offset: -2px;*/
 }
 
-.appointment-adults-childs input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+
+
+
+.rectangle {
+position: absolute;
+width: 39px;
+height: 38px;
+left: 115px;
+border: none;
 }
 
-
-.appointment-adults-childs input::before {
-  content: "";
+.union {
   position: absolute;
-  top: 4px;
-  background-color: url(../img/Rectangle.svg) no-repeat;
-  background-color: var(--basic-neutral);
+  width: 30px;
+  height: 38px;
+  right: 0;
+  border: none;
 }
 
-/*
-.appointment-adults-childs input::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  right: 4px;
-  height: 2px;
-  transform: translateY(-50%);
-  background-color: var(--basic-neutral);
+
+.appointment-adults-childs input:hover {
+  background-color: var(--basic-silver-gray);
 }
-*/
+
+.appointment-adults-childs input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-very-light-gray);
+}
+
+.appointment-adults-childs:hover path{
+  fill: var(--basic-black);
+}
+
+.appointment-adults-childs:focus path{
+  fill: var(--basic-blue);
+}
 
 .button {
   font-size: 21px;
@@ -579,9 +620,8 @@ a {
   width: 150px;
   margin: 0 auto;
   padding: 0;
-  padding-bottom: 36px;
-  /*outline: 5px solid rgb(15, 126, 126);
-  outline-offset: -5px;*/
+  margin-top: 36px;
+
 }
 
 .social-button {
@@ -592,6 +632,7 @@ a {
   height: 48px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
+
 }
 
 .social-button:hover {
@@ -612,8 +653,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  outline: 5px solid rgb(11, 238, 238);
- outline-offset: -5px;
+
 }
 
 .footer-copyright p {
@@ -724,9 +764,11 @@ padding-right: 8px;
   text-transform: uppercase;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
+  line-height: 21px;
+
   cursor: pointer;
+  outline: 5px solid rgb(158, 77, 145);
+  outline-offset: -5px;
 }
 
 .price-controls {
@@ -736,6 +778,7 @@ padding-right: 8px;
   font-size: 0;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
+
 }
 
 .price-controls::after {
@@ -753,17 +796,19 @@ padding-right: 8px;
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 50px;
 }
 
 .price-controls input {
   width: 50px;
   margin: 0;
-  color: inherit;
+  outline: 5px solid rgb(28, 236, 98);
+  outline-offset: -5px;
+  /*color: inherit;
   font: inherit;
   background: none;
   border: none;
-  outline: none;
+  outline: none;*/
 }
 
 
@@ -781,11 +826,11 @@ padding-right: 8px;
 .range-controls .bar {
   width: 80%;
   height: 2px;
-  background: #00ca74;
+  background: var(--basic-white);
 }
 
 
-.range-toggle {
+.toggle {
   position: absolute;
   top: -9px;
   width: 4px;
@@ -798,15 +843,15 @@ padding-right: 8px;
 }
 
 
-.range-toggle:hover {
+.toggle:hover {
   border: 9px solid var(--basic-white);
 }
 
-.range-toggle-min {
+.toggle-min {
   left: 0;
 }
 
-.range-toggle-max {
+.toggle-max {
   left: 80%;
 }
 
@@ -826,9 +871,8 @@ padding-right: 8px;
 }
 
 .filter-cost-button:hover {
-  color: #000000;
-
-  background: #ffffff;
+  color: var(--basic-black);
+  background: var(--basic-white);
 }
 
 
