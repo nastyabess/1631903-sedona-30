@@ -67,28 +67,21 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-item filter-item-cost">
-          <legend>Стоимость в сутки (р)</legend>
-
-          <form method="get" action="" https://echo.htmlacademy.ru"">
-            <fieldset class="filter-item-cost-range">
-              <legend class="visually-hidden">Стоимость</legend>
-              <div class="range-filter">
-                <div class="price-controls">
-                  <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-                  <label class="max-price">до <input type="text" name="max-price" value="15000"></label>
-                </div>
-                <div class="range-controls">
-                  <div class="scale">
-                    <div class="bar"></div>
-                  </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
-                </div>
-                <button class="filter-cost-button" type="submit">Показать</button>
-              </div>
-            </fieldset>
-          </form>
+        <fieldset class="filter-item filter-range">
+          <legend class="filter-range-title">Стоимость в сутки (р):</legend>
+          <div class="price-controls">
+            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+          </div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+          <button class="filter-cost-button" type="submit">Показать</button>
+          </div>
         </fieldset>
       </form>
     </section>
