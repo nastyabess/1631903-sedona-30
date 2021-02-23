@@ -796,17 +796,17 @@ padding-right: 8px;
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 21px;
   vertical-align: top;
+  padding-top: 5px;
   cursor: pointer;
- /* outline: 2px solid rgb(253, 249, 3);
-  outline-offset: -2px;*/
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  margin-left: 65px;
+
 }
 
 .price-controls input {
@@ -817,6 +817,7 @@ padding-right: 8px;
   background: none;
   border: none;
   outline: none;
+
 }
 
 .range-controls {
