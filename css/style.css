@@ -1006,7 +1006,12 @@ padding-right: 8px;
 }
 
 .rating-value {
+  width: 110px;
+  height: 27px;
+  text-align: center;
+  padding-top: 5px;
   color: var(--basic-extra-light);
+  background-color: var(--basic-gray);
 }
 
 /*selection*/
