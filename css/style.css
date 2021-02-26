@@ -181,6 +181,10 @@ a {
 .site-navigation a {
   color: var(--basic-black);
 }
+/*
+.site-navigation a:visited {
+  color: var(--basic-lightbrown);
+}*/
 
 .site-navigation a:hover {
   color: var(--basic-blue);
@@ -191,7 +195,7 @@ a {
   opacity: 0.3;
 }
 
-.site-navigation a:active {
+.site-navigation .site-navigation-active a {
   color: var(--basic-lightbrown);
 }
 
@@ -386,6 +390,8 @@ a {
   text-transform: uppercase;
   background-color: var(--basic-lightbrown);
   border: inherit;
+  outline: none;
+
   /* outline: 5px solid rgba(96, 226, 10, 0.938); */
   /* outline-offset: -5px; */
 }
@@ -394,14 +400,20 @@ a {
   font-weight: 700;
   color: var(--basic-white);
   background-color: var(--basic-saddlebrown);
+
 }
 
 .search:focus {
   color: var(--basic-white);
   background-color: var(--basic-darkbrown);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
+.search:active {
+  color: var(--basic-white);
+  background-color: var(--basic-darkbrown);
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .appointment-form {
   display: flex;
@@ -409,22 +421,29 @@ a {
   justify-content: space-between;
   padding: 55px;
 
- /* outline: 5px solid rgb(221, 245, 3);
-outline-offset: -5px;*/
+ /* outline: 1px solid rgb(221, 245, 3);
+outline-offset: -1px;*/
 }
 
 
 .appointment-item {
+  display: flex;
+  justify-content: space-between;
   position: relative;
+  margin-bottom: 29px;
   width: 458px;
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
-  /*outline: 1px solid #ff0000;*/
+
+  /* outline: 1px solid #ff0000;
+  outline-offset: -1px;*/
 }
 
 .appointment-item label {
-  margin-right: 10px;
+  padding-top: 5px;
+ /*  outline: 2px solid #b2fc07;
+  outline-offset: -2px;*/
 }
 
 .appointment-item input {
@@ -437,6 +456,9 @@ outline-offset: -5px;*/
   color: var(--basic-black);
   background-color: var(--basic-gray);
   border: none;
+  outline: none;
+ /*  outline: 2px solid #6afd07;
+  outline-offset: -2px;*/
 }
 
 .appointment-item input:hover {
@@ -451,6 +473,17 @@ outline-offset: -5px;*/
 
 /*Calendar*/
 
+.appointment-item svg:hover path {
+  fill: var(--basic-black);
+}
+
+.appointment-item svg:focus path {
+  fill: var(--basic-blue);
+}
+
+.appointment-item svg:active path {
+  fill: var(--basic-blue);
+}
 
 
 .appointment-item svg {
@@ -461,45 +494,36 @@ outline-offset: -5px;*/
   height: 23px;
 }
 
-.appointment-item svg:hover path{
-  fill: var(--basic-black);
-}
-
-.appointment-item svg:focus path{
-  fill: var(--basic-blue);
-}
-
 
 /*Input Number*/
 
 .appointment-adults-childs {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: space-between;
+  width: 229px;
   position: relative;
   margin-bottom: 50px;
   font-weight: 700;
   line-height: 26px;
   color: var(--basic-black);
 
- /*outline: 1px solid rgba(46, 12, 236, 0.938);
-  outline-offset: -1px;*/
+/*  outline: 3px solid rgba(46, 12, 236, 0.938);
+  outline-offset: -3px;*/
 }
 
 
 
 .appointment-adults-childs label {
+  padding-top: 5px;
 
-padding-left: 5px;
-padding-top: 5px;
-/*outline: 2px solid rgba(85, 218, 19, 0.938);
+ /* outline: 2px solid rgba(85, 218, 19, 0.938);
  outline-offset: -2px;*/
 }
 
 .rectangle-union {
   position: relative;
-  padding-top: 15px;
-  margin-left: 27px;
+
 /* outline: 2px solid rgba(72, 10, 245, 0.938);
   outline-offset: -2px;*/
 }
@@ -515,16 +539,17 @@ padding-top: 5px;
   color: var(--basic-black);
   background-color: var(--basic-gray);
   border: none;
+  outline: none;
 
 
-/* outline: 2px solid rgba(37, 39, 36, 0.938);
+ /* outline: 2px solid rgba(37, 39, 36, 0.938);
  outline-offset: -2px;*/
 }
 
 .appointment-childs label {
-  padding-left: 33px;
+  margin-left: 53px;
 
-  /*outline: 2px solid rgba(4, 179, 248, 0.938);
+  /* outline: 2px solid rgba(4, 179, 248, 0.938);
   outline-offset: -2px;*/
 }
 
@@ -552,27 +577,28 @@ padding-top: 5px;
 
 .btn-rectangle svg:hover rect {
   fill: var(--basic-black);
-  border: none;
-  outline: none;
 }
 
 .btn-rectangle svg:focus rect {
   fill: var(--basic-blue);
-  border: none;
-  outline: none;
+}
+
+.btn-rectangle svg:active rect {
+  fill: var(--basic-blue);
 }
 
 .btn-union svg:hover path {
   fill: var(--basic-black);
-  border: none;
-  outline: none;
 }
 
 .btn-union svg:focus path {
   fill: var(--basic-blue);
-  border: none;
-  outline: none;
 }
+
+.btn-union svg:active path {
+  fill: var(--basic-blue);
+}
+
 
 .button {
   font-size: 21px;
@@ -583,6 +609,7 @@ padding-top: 5px;
   background-color: var(--basic-blue);
   border: inherit;
   text-transform: uppercase;
+  outline: none;
 }
 
 .button:hover {
@@ -593,7 +620,13 @@ padding-top: 5px;
 .button:focus {
   color: var(--basic-white);
   background-color: var(--basic-lightskyblue);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+  color: var(--basic-white);
+  background-color: var(--basic-lightskyblue);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .map {
@@ -673,6 +706,15 @@ height: 594px;
 }
 
 .social-button:focus {
+  background-color: var(--basic-lightskyblue);
+}
+
+.social-button:focus path {
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
+
+.social-button:active {
   background-color: var(--basic-lightskyblue);
 }
 
@@ -768,7 +810,7 @@ padding-right: 8px;
   position: absolute;
   background-image: url(../img/tick.svg);
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 1px 0;
 }
 
 .filter-input:disabled+label::before {
@@ -965,15 +1007,18 @@ padding-right: 8px;
 
 .sorting-options-link:hover {
   color: var(--basic-blue);
+  opacity: 1;
   border-bottom: 1px dashed #81B3D2;
 }
 
 .sorting-options-link:focus {
   color: var(--basic-black);
+  border-bottom: none;
 }
 
 .sorting-options-link:active {
   color: var(--basic-blue);
+  opacity: 1;
   border-bottom: none;
 }
 
@@ -1074,16 +1119,23 @@ padding-right: 8px;
 
 }
 
+.extra:active {
+  background-color: var(--basic-lightskyblue);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 .extra:hover {
   color: var(--basic-white);
   background-color: var(--basic-skyblue);
 }
 
 .extra:focus {
-  color: var(--basic-white);
   background-color: var(--basic-lightskyblue);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
+
+
 
 .book {
   font-weight: 700;
@@ -1093,14 +1145,19 @@ padding-right: 8px;
 
 }
 
+.book:active {
+  background-color: var(--basic-darkbrown);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 .book:hover {
   color: var(--basic-white);
   background-color: var(--basic-saddlebrown);
 }
 
 .book:focus {
-  color: var(--basic-white);
   background-color: var(--basic-darkbrown);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
