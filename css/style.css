@@ -76,6 +76,7 @@ a {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  position: relative;
 }
 
 .visually-hidden {
@@ -348,6 +349,10 @@ a {
 
 /*appointment*/
 
+.location {
+  position: relative;
+}
+
 .appointment {
   text-align: center;
   /* outline: 5px solid rgb(247, 164, 9); */
@@ -374,6 +379,10 @@ a {
 .form-search {
   width: 568px;
   margin: 0 auto;
+  background-color: var(--basic-white);
+  position: absolute;
+  left: 316px;
+  top: 43px;
 
   /* outline: 5px solid rgba(43, 8, 238, 0.938);
   outline-offset: -5px;*/
@@ -638,17 +647,15 @@ height: 594px;
    display: block;
  }
 
-.index-page {
-  position: relative;
-  height: 100%;
-}
-
- .main-footer {
+ /*.main-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
+*/
+
+
 
 /*Main-footer*/
 
@@ -656,7 +663,10 @@ height: 594px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 120px;
-
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   color: var(--basic-black);
   background-color: var(--basic-white);
   /*outline: 5px solid rgba(255, 0, 0, 0.7);
@@ -915,16 +925,19 @@ padding-right: 8px;
 .range-toggle {
   position: absolute;
   top: -9px;
-  width: 4px;
-  height: 4px;
-  background: (--basic-medium-light-gray);
+  width: 20px;
+  height: 20px;
+  background: var(--basic-medium-light-gray);
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--basic-medium-light-gray);
   cursor: pointer;
+
 }
 
 .range-toggle:hover {
+  width: 22px;
+  height: 22px;
   border: 9px solid var(--basic-white);
 }
 
