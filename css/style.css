@@ -76,6 +76,9 @@ a {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+}
+
+.index-body {
   position: relative;
 }
 
@@ -659,14 +662,18 @@ height: 594px;
 
 /*Main-footer*/
 
-.main-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  min-height: 120px;
+.index-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 120px;
+
   color: var(--basic-black);
   background-color: var(--basic-white);
   /*outline: 5px solid rgba(255, 0, 0, 0.7);
@@ -771,6 +778,7 @@ padding-right: 8px;
 
 .filters {
   color: var(--basic-white);
+
   background-image: url("../img/mountain.jpg");
   background-color: var(--basic-ashgray);
   background-repeat: no-repeat;
@@ -890,7 +898,7 @@ padding-right: 8px;
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
+  width: 95px;
   margin-left: 65px;
 
 }
