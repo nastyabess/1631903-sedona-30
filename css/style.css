@@ -263,6 +263,7 @@ a {
 
 .feature-item-image {
   display: flex;
+  flex-wrap: wrap;
   /* outline: 5px solid rgb(142, 35, 230); */
   /* outline-offset: -5px; */
 }
@@ -329,6 +330,7 @@ a {
 
  .benefits-item {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   padding: 60px 60px 60px 82px;
 /*outline: 5px solid rgba(236, 7, 26, 0.3); */
@@ -441,6 +443,7 @@ outline-offset: -1px;*/
 
 .appointment-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
   margin-bottom: 29px;
@@ -720,6 +723,7 @@ height: 594px;
 
 .social-button {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 46px;
@@ -754,6 +758,7 @@ height: 594px;
 
 .footer-copyright {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 
@@ -1015,6 +1020,7 @@ padding-right: 8px;
 
 .sorting-options {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -1089,6 +1095,7 @@ padding-right: 8px;
 
 .results-rating {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
