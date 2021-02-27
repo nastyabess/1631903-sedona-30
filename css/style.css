@@ -352,12 +352,11 @@ a {
 
 /*appointment*/
 
-.location {
-  position: relative;
-}
+
 
 .appointment {
   text-align: center;
+  padding-top: 26px;
   /* outline: 5px solid rgb(247, 164, 9); */
 }
 
@@ -382,10 +381,9 @@ a {
 .form-search {
   width: 568px;
   margin: 0 auto;
-  background-color: var(--basic-white);
-  position: absolute;
-  left: 316px;
-  top: 43px;
+
+  position: relative;
+
 
   /* outline: 5px solid rgba(43, 8, 238, 0.938);
   outline-offset: -5px;*/
@@ -428,10 +426,13 @@ a {
 }
 
 .appointment-form {
+  position: absolute;
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 55px;
+  background-color: var(--basic-white);
 
  /* outline: 1px solid rgb(221, 245, 3);
 outline-offset: -1px;*/
@@ -673,9 +674,9 @@ height: 594px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 120px;
-
   color: var(--basic-black);
   background-color: var(--basic-white);
+  opacity: 0.9;
   /*outline: 5px solid rgba(255, 0, 0, 0.7);
   outline-offset: -5px;*/
 
@@ -1043,14 +1044,8 @@ padding-right: 8px;
   border-bottom: 1px dashed #81B3D2;
 }
 
-.sorting-options-link:focus {
-  color: var(--basic-black);
-  border-bottom: none;
-}
-
 .sorting-options-link:active {
-  color: var(--basic-blue);
-  opacity: 1;
+  color: var(--basic-black);
   border-bottom: none;
 }
 
