@@ -1143,6 +1143,7 @@ padding-right: 8px;
 /*selection*/
 
 .results-descript {
+  height: 90px;
 
 
  /*outline: 2px solid rgb(8, 169, 243);
@@ -1174,7 +1175,7 @@ padding-right: 8px;
 
 .extra {
   font-weight: 700;
-  padding: 6px 17px;
+  padding: 3px 17px;
   color: var(--basic-white);
   background-color: var(--basic-blue);
 
@@ -1200,7 +1201,7 @@ padding-right: 8px;
 
 .book {
   font-weight: 700;
-  padding: 6px 18px;
+  padding: 3px 18px;
   color: var(--basic-white);
   background-color: var(--basic-lightbrown);
 
