@@ -103,11 +103,6 @@ a {
 
 /* Grid for catalog */
 
-.page-catalog {
-  height: 100%;
-  display: grid;
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -181,7 +176,7 @@ a {
   opacity: 0.3;
 }
 
-.site-navigation .site-navigation-active a {
+.site-navigation-active a {
   color: var(--basic-lightbrown);
 }
 
@@ -479,24 +474,24 @@ a {
 
 /*Calendar*/
 
-.appointment-item svg:hover path {
-  fill: var(--basic-black);
-}
-
-.appointment-item svg:focus path {
-  fill: var(--basic-blue);
-}
-
-.appointment-item svg:active path {
-  fill: var(--basic-blue);
-}
-
-.appointment-item svg {
+.appointment-calendar {
   position: absolute;
   right: 14px;
   top: 7px;
   width: 21px;
   height: 23px;
+}
+
+.appointment-calendar:hover path {
+  fill: var(--basic-black);
+}
+
+.appointment-calendar:focus path {
+  fill: var(--basic-blue);
+}
+
+.appointment-calendar:active path {
+  fill: var(--basic-blue);
 }
 
 /*Input Number*/
