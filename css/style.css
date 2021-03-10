@@ -41,6 +41,8 @@ html {
   --basic-soft-red: #dc6243;
   --basic-soft-orange: #f49774;
   --basic-very-soft-red: #f4b1a4;
+  --basic-almost-white: rgba(255, 255, 255, 0.3);
+  --basic-translucent-white: rgba(255, 255, 255, 0.9);
 }
 
 /* Global */
@@ -458,13 +460,13 @@ a {
 .search:focus {
   color: var(--basic-white);
   background-color: var(--basic-darkbrown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
 
 .search:active {
   color: var(--basic-white);
   background-color: var(--basic-darkbrown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
 
 .appointment-form {
@@ -509,12 +511,13 @@ a {
   padding-left: 13px;
   padding-top: 6px;
   padding-bottom: 7px;
+  padding-right: 40px;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
   color: var(--basic-black);
   background-color: var(--basic-gray);
-  border: none;
+  border: 2px solid transparent;
   outline: none;
   /*outline: 2px solid rgb(85, 134, 130);
   outline-offset: -2px;*/
@@ -527,6 +530,30 @@ a {
 .appointment-item input:focus {
   background-color: var(--basic-white);
   border: 2px solid var(--basic-very-light-gray);
+}
+
+.appointment-item input::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-item input::-moz-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-item input:-ms-input-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-item input::-ms-input-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-item input::placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-item input::-webkit-input-placeholder,::-moz-placeholder, :-moz-placeholder {
+  opacity: 1;
 }
 
 /*Calendar*/
@@ -574,6 +601,30 @@ a {
   padding-top: 8px;
 }
 
+.appointment-adults-childs input::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-adults-childs input::-moz-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-adults-childs input:-ms-input-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-adults-childs input::-ms-input-placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-adults-childs input::placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-adults-childs input::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder {
+  opacity: 1;
+}
+
 .rectangle-union {
   position: relative;
 }
@@ -601,6 +652,7 @@ a {
   height: 38px;
   left: 0;
   z-index: 2;
+  padding-bottom: 5px;
   border: none;
   outline: none;
   background-color: var(--basic-gray);
@@ -611,38 +663,40 @@ a {
   width: 39px;
   height: 38px;
   right: 0;
+  padding-top: 4px;
   border: none;
   outline: none;
   background-color: var(--basic-gray);
 }
 
-.btn-rectangle svg:hover rect {
+.btn-rectangle:hover rect {
   fill: var(--basic-black);
 }
 
-.btn-rectangle svg:focus rect {
+.btn-rectangle:focus rect {
   fill: var(--basic-blue);
 }
 
-.btn-rectangle svg:active rect {
+.btn-rectangle:active rect {
   fill: var(--basic-blue);
 }
 
-.btn-union svg:hover path {
+.btn-union:hover path {
   fill: var(--basic-black);
 }
 
-.btn-union svg:focus path {
+.btn-union:focus path {
   fill: var(--basic-blue);
 }
 
-.btn-union svg:active path {
+.btn-union:active path {
   fill: var(--basic-blue);
 }
 
 .button {
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
   width: 458px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -661,13 +715,13 @@ a {
 .button:focus {
   color: var(--basic-white);
   background-color: var(--basic-lightskyblue);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
 
 .button:active {
   color: var(--basic-white);
   background-color: var(--basic-lightskyblue);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
 
 .map {
@@ -696,7 +750,7 @@ background-color: var(--basic-ashgray);
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 120px;
   color: var(--basic-black);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--basic-translucent-white);
 }
 
 .footer-contacts {
@@ -855,26 +909,27 @@ padding-right: 8px;
   content: "";
   position: absolute;
   left: 0;
-  width: 23px;
+  width: 27px;
   height: 23px;
-  border-radius: 4px;
-  border: 2px solid var(--basic-white);
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 1px 0;
 }
 
 .filter-input:checked ~ label::before {
   content: "";
   position: absolute;
-  background-image: url("../img/tick.svg");
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 1px 0;
 }
 
-.filter-input:disabled+label::before {
-  border: 2px solid var(--basic-dimgray);
+.filter-input:disabled + label::before {
+  background-image: url("../img/checkbox-off-disabled.svg");
 }
 
-.filter-input:disabled ~ label::before {
-  background-image: url("../img/Shape2.svg");
+.filter-input:checked:disabled + label::before {
+  background-image: url("../img/checkbox-disabled.svg");
 }
 
 
@@ -947,7 +1002,7 @@ padding-right: 8px;
 
 .range-controls .scale {
   height: 2px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--basic-almost-white);
 }
 
 .range-controls .bar {
@@ -1011,7 +1066,7 @@ padding-right: 8px;
   padding: 0 73px;
   padding-top: 20px;
   padding-bottom: 31px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--basic-very-light-gray);
   gap: 27px;
   -ms-grid-columns: 135px 27px auto 27px 1fr;
   grid-template-columns: 135px auto 1fr;
@@ -1052,7 +1107,7 @@ padding-right: 8px;
 .sorting-options-link {
   color: var(--basic-black);
   opacity: 0.3;
-  border-bottom: 1px dashed #81B3D2;
+  border-bottom: 1px dashed var(--basic-blue);
 }
 
 .sorting-options-link-active {
@@ -1064,7 +1119,7 @@ padding-right: 8px;
 .sorting-options-link:hover {
   color: var(--basic-blue);
   opacity: 1;
-  border-bottom: 1px dashed #81B3D2;
+  border-bottom: 1px dashed var(--basic-blue);
 }
 
 .sorting-options-link:active {
@@ -1097,15 +1152,15 @@ padding-right: 8px;
   fill: var(--basic-blue);
 }
 
-.sorting-arrow svg:hover path {
+.sorting-arrow:hover path {
   fill: var(--basic-black);
 }
 
-.sorting-arrow svg:focus path {
+.sorting-arrow:focus path {
   fill: var(--basic-blue);
 }
 
-.sorting-arrow svg:active path {
+.sorting-arrow:active path {
   fill: var(--basic-blue);
 }
 
@@ -1177,7 +1232,7 @@ padding-right: 8px;
 
 .extra:active {
   background-color: var(--basic-lightskyblue);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
 
 
@@ -1188,7 +1243,7 @@ padding-right: 8px;
 
 .extra:focus {
   background-color: var(--basic-lightskyblue);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
 
 .book {
@@ -1200,7 +1255,7 @@ padding-right: 8px;
 
 .book:active {
   background-color: var(--basic-darkbrown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
 
 .book:hover {
@@ -1210,5 +1265,5 @@ padding-right: 8px;
 
 .book:focus {
   background-color: var(--basic-darkbrown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-almost-white);
 }
